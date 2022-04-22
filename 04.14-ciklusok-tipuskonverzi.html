@@ -1,0 +1,250 @@
+<script>
+// 1. Írd át a programot, hogy ciklust használjon!
+
+// let i = 0;
+
+// console.log(i);
+// i = i + 1;
+
+// console.log(i);
+// i = i + 1;
+ 
+// console.log(i);
+// i = i + 1;
+
+for(let i = 0; i < 3; i++)  {
+    console.log(i);
+}
+
+let j = 0;
+while(j < 3) {
+    console.log(j);
+    j++;
+}
+
+//2. Írd át a programot, hogy ciklust használjon!
+
+// let i = 0;
+
+// console.log(i);
+// i = i + 2;
+
+// console.log(i);
+// i = i + 2;
+ 
+// console.log(i);
+// i = i + 2;
+
+let i = 0;
+
+while (i<4) {
+    console.log(i);
+    i = i+2;
+}
+
+// 3. Írd át a programot, hogy ciklust használjon!
+
+// let i = 5;
+
+// console.log(i);
+// i = i + 1;
+
+// console.log(i);
+// i = i + 1;
+
+// console.log(i);
+// i = i + 1;
+
+for ( let i = 5; i < 8 ; i++) {
+    console.log(i);
+}
+
+// 4. Írd át a programot, hogy ciklust használjon!
+
+// let i = 2;
+
+// console.log(i);
+// i = i - 1;
+
+// console.log(i);
+// i = i - 1;
+
+// console.log(i);
+// i = i - 1;
+
+for (let i = 2; i >=0; i--) {
+    console.log(i);
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//CIKLUS ÍRÁS
+
+//1. Írj egy ciklust, ami a konzolra írja a számokat 0-tól 5-ig!
+
+for (let i=0; i<6; i++) {
+    console.log(i);
+}
+
+//2. Írj egy ciklust, ami a konzolra írja a számokat 3-tól 8-ig!
+
+for (let i=3; i<9; i++) {
+    console.log(i);
+}
+
+//3. Írj egy ciklust, ami a konzolra írja a számokat 0-tól 5-ig, kettesével lépkedve!
+
+let k = 0;
+while(k < 5) {
+    console.log(k);
+    k = k + 2;
+}
+
+//4. Írj egy ciklust, ami a konzolra írja a számokat 3-tól 8-ig, hármasával lépkedve!
+
+let l = 3;
+while(l <= 8) {
+    console.log(l);
+    l = l + 3;
+}
+
+//5. Írj egy ciklust, ami a konzolra írja a számokat 5-tól 0-ig, visszafelé!
+
+for(let i = 5; i >= 0; i--) {
+    console.log(i);
+}
+
+//6. Írj egy ciklust, ami a konzolra írja a számokat 8-tól 3-ig, visszafelé!
+
+for(let i = 8; i >= 3; i--){
+    console.log(i)
+}
+
+//7. Írj egy ciklust, ami a konzolra írja a számokat 0-tól -5-ig, visszafelé, négyesével lépkedve
+
+let n = 0;
+while(n >= -5) {
+    console.log(n);
+    n = n-4;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//INDEFINIT CIKLUS
+
+//1. Írj számokat a konzolra, 0-tól kezdődően, növekvő sorrendben, amíg a felhasználó kéri!
+
+let a = confirm("Folytassuk?");
+let szam = 0;
+while(a) {
+    console.log(szam);
+    szam++;
+    a = confirm("Folytassuk?")
+}
+
+//2. Írj számokat a konzolra, 0-tól kezdődően, növekvő sorrendben, amíg a felhasználó kéri vagy amíg el nem érted az 3-at!
+
+let b = confirm("Folytassuk?");
+let number = 0;
+while((b) && (number <= 3)) {
+    console.log(number);
+    number++;
+    b = confirm("Folytassuk?")
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//TÖMB + CIKLUS
+
+//bejárás + index + hossz
+
+let t = [42, 55, 0, -22, 77, 10, 0, -6];
+
+//1. írd a konzolra a tömb elemeit, egyenként! 
+
+for(let i = 0; i<t.length; i++) {
+    console.log(t[i]);
+}
+
+//2. írd a konzolra a tömb elemeit, visszafelé, egyenként!
+
+for(let i = t.length-1; i=0; i--) {
+    console.log(t[i]);
+}
+
+//3. írd a konzolra a tömb elemeit, egyenként, az indexszel együt, az alábbi formában!
+
+// "t 0 indexen tárolt érték: 42"
+// "t 1 indexen tárolt érték: 55"
+// "t 2 indexen tárolt érték: 0"
+//  ...
+
+for(let i = 0; i<t.length; i++) {
+    console.log("t " + i + " indexen tárolt érték: " + t[i]);
+}
+
+//4. írd a konzolra a tömb elemeit, egyenként, a sorszámmal együt, az alábbi formában!
+// "t 1. eleme: 42"
+// "t 2. eleme: 55"
+// "t 3. eleme: 0"
+// ...
+
+for(let i = 0; i<t.length; i++) {
+    console.log("t " + (i+1) + "." + " eleme: " + t[i]);
+}
+
+//5. írd a konzolra a tömb elemeit, egyenként, és, hogy hány elem van még utána a tömbben, az alábbi formában!
+// "42 után 7 elem van"
+// "55 utan 6 elem van"
+// "0 után 5 elem van"
+// ...
+
+for(let i = 0; i<t.length; i++) {
+    console.log(t[i] + " után " + (t.length-1-i) + " elem van");
+}
+
+//6. Írd a konzolra a tömb elemeit, egyenként, visszafelé, és azt, hogy hátulról hányadik!
+// "-6 hátulról 1."
+// "0 hátulról 2."
+// "10 hátulról 3."
+// // ...
+
+for(let i = t.length-1; i>=0; i--) {
+    console.log(t[i] + " hátulról " + (t.length-i)  +".");
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//BEJÁRÁS + ELÁGAZÁS
+
+//1. Írd a konzolra a pozitív számokat!
+for(let i = 0; i < t.length; i++) {
+    if(t[i] >= 0) {
+        console.log(t[i]);
+    }
+}
+
+//2. Írd a konzolra a negatív számokat!
+
+for(let i = 0; i < t.length; i++) {
+    if(t[i] < 0) {
+        console.log(t[i]);
+    }
+}
+
+//3. Írd a konzolra az indexeket, ahol 0 érték van!
+
+for(let i = 0; i < t.length; i++) {
+    if(t[i] == 0) {
+        console.log(i);
+    }
+}
+
+//4. Írd a konzolra a páros számokat! Egy szám páros, ha a kettővel vett maradékos osztásának eredménye nulla! A maradékos osztást végző operátor jele %.
+
+for(let i = 0; i < t.length; i++) {
+    if(t[i] % 2 == 0) {
+        console.log(t[i]);
+    }
+}
+
+
+
+</script>

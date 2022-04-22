@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script> <!-- 0. töltsd be a jqueryt! -->
+</head>
+
+<body>
+    <div id="esemeny01">
+        <button>foo</button>
+        <button>bar</button>
+    </div>
+    <script> // 1. a foo gombra kattintva jelenjen meg egy alert a 42-es számmal
+        let btn = $("button:first");
+        btn.click(function () {
+            alert("42");
+        });
+    </script>
+
+    <div id="esemeny02">
+        <button id="read">read</button>
+        <button id="write">write</button>
+    </div>
+    <script>
+        let szoveg;
+        // 2. a read gombra kattintva kérj be egy értéket a szoveg változóba,
+        //    a write gombra kattintva jelenítsd meg a szoveg értékét
+        let readBtn = $("button#read");
+        readBtn.click(function () {
+            szoveg = prompt("Adj meg egy értéket!");
+        });
+
+        let writeBtn = $("button#write");
+        writeBtn.click(function () {
+            alert(szoveg);
+        });
+    </script>
+
+
+    <div id="esemeny03">
+        <input type="text" id="egyik">
+        <input type="text" id="masik">
+        <button>összeg</button>
+    </div>
+    <script>
+        // 3. az összeg gombra kattintva számold ki az egyik és masik inputba írt
+        //    számok összegét
+        // - input elem értékének kiolvasása: https://api.jquery.com/val/
+        let osszeg = 0;
+        let osszegBtn = $("#esemeny03 button");
+        
+        $("input#egyik").keyup(function () {
+                let egyik = $(this).val();
+                osszeg += Number(egyik);
+            })
+            .keyup();
+            
+        $("input#masik").keyup(function () {
+                 let masik = $(this).val();
+                 osszeg += Number(masik);
+            })
+            .keyup();
+
+        osszegBtn.click(function() {
+            alert(osszeg);
+        });
+
+    </script>
+</body>
+</html>
+
+        

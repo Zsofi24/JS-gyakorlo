@@ -1,0 +1,57 @@
+<script>
+// 1.Hozz létre egy tömböt 3 elemmel és írd ki az elemeket egyesével (indexeléssel)!
+
+let tomb = [12, 25, "macska"];
+console.log(t[0]);
+console.log(t[1]);
+console.log(t[2]);
+
+// 2. írd meg a t tömböt úgy, hogy a várt eredményeket kapjuk:
+
+let t = ["hello", "5", "5", undefined, undefined];
+
+ console.log(t[0]);        // "hello"
+ console.log(t[1] + t[2]) // "55"
+ console.log(t.length);   // 5
+ console.log(t[3]);        // undefined
+ console.log(t[5]);       // undefined
+ console.log(t);
+
+// 3. Hozz létre egy üres tömböt! Kérj be három értéket a felhasználótól és írd be a tömbbe! 
+// Oldd meg a feladatot indexléssel és push metódussal is!
+
+//indexeléssel
+
+let a = [];
+a[0] = prompt("Adj meg egy értéket");
+a[1] = prompt("Adj meg egy értéket");
+a[2] = prompt("Adj meg egy értéket");
+console.log(a);
+
+//push
+
+let b = [];
+b.push(prompt("Adj meg egy értéket"));
+b.push(prompt("Adj meg egy értéket"));
+b.push(prompt("Adj meg egy értéket"));
+console.log(b);
+
+//4. Írd ki a felsorolt értékeket a tömbből egyenként (indexeléssel)!
+
+let c = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];  
+
+console.log(c[0][0]);
+console.log(c[0][1]);
+console.log(c[0][2]);
+console.log(c[1][0]);
+console.log(c[1][1]);
+console.log(c[1][2]);
+console.log(c[2][0]);
+console.log(c[2][1]);
+console.log(c[2][2]);
+
+</script>

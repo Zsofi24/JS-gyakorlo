@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>   <!-- 0. töltsd be a jqueryt! -->
+</head>
+<body>
+    <!--  1. válaszd ki a fenti foo és bar gombokat -->
+    <div id="kivalaszt01">
+        <button>foo</button>
+        <button>bar</button>
+    </div>
+    <script>
+        let chooseButton = $("#kivalasztas01 button");
+    </script>
+
+    <!-- 2. válaszd ki a quux gombot -->
+    <div id="kivalaszt02">
+        <button>foo</button>
+        <button class="valami">quux</button>
+    </div>
+    <script>// 
+        let kivalasztas2Button = $("#kivalasztas02 button.valami");
+    </script>
+
+    <!-- 3. válaszd ki a kedvencek lista elemeit (csak a lista elemeket) -->
+
+    <div id="kivalaszt03">
+        <ul id="kedvencek">
+            <li>foo</li>
+            <li>bar</li>
+            <li>baz</li>
+        </ul>
+        <ul id="nem-kedvencek">
+            <li>asdf</li>
+            <li>qwer</li>
+            <li>yxcv</li>
+        </ul>
+    </div>
+    <script> 
+       let kivalasztas3Li = $("ul#kedvencek li");
+    </script>
+</body>
+</html>

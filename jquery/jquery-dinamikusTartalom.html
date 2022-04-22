@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>  <!-- 0. töltsd be a jqueryt! -->
+</head>
+<body>
+    
+    <div id="dinamikus01">
+        <button>ki</button>
+        <button>be</button>
+        <h1 id="kibe"></h1>
+    </div>
+    <script>
+        // 1. a ki és be gombok a "kibe" h1 elem tartalmát állítsák be arra, hogy
+        //    "ki" vagy "be"
+        // - elem tartalmának teljes felülírása: https://api.jquery.com/html/#html2
+        $("#dinamikus01 button:first-child").click(function(){
+            $("h1#kibe").html("ki");
+        });
+
+        $("#dinamikus01 button:last-of-type").click(function(){
+            $("h1#kibe").html("be");
+        });
+        
+    </script>
+
+    <div id="dinamikus02">
+        <button id="novel">növel</button>
+        <button id="csokkent">csökkent</button>
+        <div id="szamlalo">0</div>
+    </div>
+    <script>
+        let szam = 0;
+        // 2. a novel gombra kattintva növeld a szam valtozo értékét, a csokkent gombra
+        //    kattintva csökkentsd. Mindkét gombra kattintás esetén jelenítsd meg az aktuális
+        //    értéket a szamlalo divben
+        $("#dinamikus02 button#novel").click(function(){
+            szam += 1;
+            $("#dinamikus02 #szamlalo").html(szam);
+        });
+        $("#dinamikus02 button#csokkent").click(function(){
+            szam -= 1;
+            $("#dinamikus02 #szamlalo").html(szam);
+        });
+        
+    </script>
+
+
+    <div id="dinamikus03">
+        <button id="uj">új listaelem</button>
+        <button id="torol">utolsó törlése</button>
+        <ul id="lista">
+
+        </ul>
+    </div>
+    <script>
+        let utolso;
+        // 3. az új listaelem gombra kattintva hozz létre és illessz be egy új listaelemet
+        //    a listába. A törlés gombra kattintva töröld ki a legutoljára kitörölt elemet.
+        //    
+        //    Amikor hozzáadsz egy listaelemet, mentsd el a referenciát az utolso változóba.
+        //    - elem létrehozása: https://api.jquery.com/jQuery/#jQuery2
+        //    - elem beillesztése: https://api.jquery.com/append/
+        //    - elem törlése: https://api.jquery.com/remove/
+        // 
+        
+        $("#dinamikus03 button#uj").click(function(){
+            let elem = prompt("Mit írjak fel a listára?");
+            let ujListaElem = $("<li>");
+            ujListaElem.append(elem);
+            $("#lista").append(ujListaElem);
+        });
+        $("#dinamikus03 button#torol").click(function(){
+            $("ul#lista li:last-child").remove();
+        })
+
+
+    </script>
+</body>
+</html>
